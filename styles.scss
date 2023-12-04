@@ -1,0 +1,163 @@
+// COLORS
+$gunmetal: #002f3d;
+$verdigris: #00afb9;
+$lightyellow: #fdfcdc;
+$lightorange: #fed9b7;
+$bittersweet: #f07167;
+
+// BODY
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfcdc;
+}
+
+// HEADER
+header {
+  background-color: $gunmetal;
+  color: $lightyellow;
+  padding: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header_logo {
+    p {
+      font-weight: bold;
+      font-style: italic;
+      font-size: 14px;
+    }
+  }
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      padding: 0;
+      // Schrift ist jetzt genau in Mitte
+      li {
+        a {
+          text-decoration: none;
+          color: $lightyellow;
+          font-weight: bold;
+          font-size: 1.5rem;
+
+          &:hover {
+            color: $bittersweet;
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+  .header_button {
+    .login_btn {
+      background-color: $bittersweet;
+      color: $gunmetal;
+      font-weight: bold;
+      padding: 0.5em 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($bittersweet, 15%);
+        // darken => Farbe wird dunkler
+        color: $lightyellow;
+      }
+    }
+  }
+}
+
+// MAIN
+
+main {
+  .main_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    p {
+      color: $gunmetal;
+      font-weight: bold;
+      font-size: 1rem;
+      animation: textAnime 2s infinite alternate;
+    }
+    .register_btn {
+      background-color: $verdigris;
+      color: $lightyellow;
+      font-weight: bold;
+      padding: 1.3em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        background-color: $gunmetal;
+        color: $bittersweet;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .features_section {
+    background-color: $verdigris;
+    padding: 1.5em;
+    text-align: center;
+    margin-bottom: 70px;
+    .style_list {
+      h2 {
+        font-size: 1.8rem;
+        color: $lightyellow;
+        margin-bottom: 50px;
+        text-shadow: 5px 5px 5px $gunmetal;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        li {
+          background-color: $lightorange;
+          padding: 0.7em;
+          border-radius: 5px;
+          color: $gunmetal;
+          font-weight: bold;
+          cursor: pointer;
+          box-shadow: 5px 5px 5px $gunmetal;
+
+          &:hover {
+            background-color: $gunmetal;
+            color: $bittersweet;
+            transform: scale(1.1);
+            box-shadow: 5px 5px 5px $bittersweet;
+          }
+        }
+      }
+    }
+  }
+}
+
+// KEYFRAMES
+@keyframes textAnime {
+  from {
+    transform: scale(1);
+    color: $gunmetal;
+  }
+  to {
+    transform: scale(1.2);
+    color: $verdigris;
+  }
+}
+
+// FOOTER
+footer {
+  background-color: $gunmetal;
+  color: $lightyellow;
+  text-align: center;
+  padding: 0.5em;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: 7px solid $lightorange;
+}

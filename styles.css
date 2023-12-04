@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfcdc;
+}
+
+header {
+  background-color: #002f3d;
+  color: #fdfcdc;
+  padding: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_logo p {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #fdfcdc;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+header nav ul li a:hover {
+  color: #f07167;
+  font-size: 1.8rem;
+}
+header .header_button .login_btn {
+  background-color: #f07167;
+  color: #002f3d;
+  font-weight: bold;
+  padding: 0.5em 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+header .header_button .login_btn:hover {
+  background-color: #e93021;
+  color: #fdfcdc;
+}
+
+main .main_section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+}
+main .main_section p {
+  color: #002f3d;
+  font-weight: bold;
+  font-size: 1rem;
+  animation: textAnime 2s infinite alternate;
+}
+main .main_section .register_btn {
+  background-color: #00afb9;
+  color: #fdfcdc;
+  font-weight: bold;
+  padding: 1.3em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+main .main_section .register_btn:hover {
+  background-color: #002f3d;
+  color: #f07167;
+  transform: scale(1.1);
+}
+main .features_section {
+  background-color: #00afb9;
+  padding: 1.5em;
+  text-align: center;
+  margin-bottom: 70px;
+}
+main .features_section .style_list h2 {
+  font-size: 1.8rem;
+  color: #fdfcdc;
+  margin-bottom: 50px;
+  text-shadow: 5px 5px 5px #002f3d;
+}
+main .features_section .style_list ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+main .features_section .style_list ul li {
+  background-color: #fed9b7;
+  padding: 0.7em;
+  border-radius: 5px;
+  color: #002f3d;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #002f3d;
+}
+main .features_section .style_list ul li:hover {
+  background-color: #002f3d;
+  color: #f07167;
+  transform: scale(1.1);
+  box-shadow: 5px 5px 5px #f07167;
+}
+
+@keyframes textAnime {
+  from {
+    transform: scale(1);
+    color: #002f3d;
+  }
+  to {
+    transform: scale(1.2);
+    color: #00afb9;
+  }
+}
+footer {
+  background-color: #002f3d;
+  color: #fdfcdc;
+  text-align: center;
+  padding: 0.5em;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: 7px solid #fed9b7;
+}
+
+/*# sourceMappingURL=styles.css.map */
